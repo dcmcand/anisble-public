@@ -1,4 +1,4 @@
-# anisble-public
+# ansible-public
 Ansible playbook setting up linux mint computers for use as public access computers for a public library.
 
 This setup requires a control computer running linux to push out the configurations.  The computer only needs to be on the same subnet as your public computers. I am working on a bxe-boot setup that would make the first steps automatic, but that is still a work in progress.
