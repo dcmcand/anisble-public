@@ -1,0 +1,2 @@
+dist.torproject.org:HSTS	0	16826	1469610020937,1,0
+www.torproject.org:HSTS	1	16826	1469610019753,1,0

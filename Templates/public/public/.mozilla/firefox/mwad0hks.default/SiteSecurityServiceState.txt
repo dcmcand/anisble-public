@@ -1,0 +1,3 @@
+services.addons.mozilla.org:HSTS	1	16826	1485378138032,1,0
+observatory.eff.org:HSTS	0	16826	1485378154337,1,1
+addons.mozilla.org:HSTS	0	16813	1484232967171,1,0

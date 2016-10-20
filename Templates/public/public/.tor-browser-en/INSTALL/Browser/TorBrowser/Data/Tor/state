@@ -1,0 +1,13 @@
+# Tor state file last generated on 2016-01-13 14:58:34 local time
+# Other times below are in UTC
+# You *do not* need to edit this file.
+
+EntryGuard Hexfocus 95EBED040922A20D7BF5C6F352AE34E4F68EDFB0 NoDirCache
+EntryGuardAddedBy 95EBED040922A20D7BF5C6F352AE34E4F68EDFB0 0.2.7.6 2015-12-31 21:50:38
+EntryGuardPathBias 4.000000 4.000000 4.000000 0.000000 0.000000 0.000000
+EntryGuardPathUseBias 1.000000 1.000000
+TorVersion Tor 0.2.7.6 (git-7a489a6389110120)
+LastWritten 2016-01-13 14:58:34
+TotalBuildTimes 4
+CircuitBuildTimeBin 375 3
+CircuitBuildTimeBin 425 1

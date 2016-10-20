@@ -1,0 +1,7 @@
+[Desktop Entry]
+Comment=
+Terminal=false
+Name=Log Out Securely
+Exec=/usr/bin/gnome-session-quit --force
+Type=Application
+Icon=gnome-logout

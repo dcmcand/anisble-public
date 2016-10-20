@@ -1,0 +1,78 @@
+---
+- hosts: public
+  tasks:
+    - name: updates system
+      apt:
+        update_cache=yes
+        upgrade=yes
+    - name: installs xautolock
+      apt:
+        name: xautolock
+        state: latest
+    - name: sets up google-chrome.repo
+      apt_key:
+        url=https://dl-ssl.google.com/linux/linux_signing_key.pub
+    - name: sets up google-chrome key
+      apt_repository:
+        repo="deb [arch=amd64] http://dl.google.com/linux/deb/ stable main"
+    - name: installs chrome
+      apt:
+        name=google-chrome-stable
+        state=latest
+    - name: installs arduino
+      apt:
+        name=arduino
+        state=latest
+    - name: add public user
+      user:
+        name=public
+        password=public
+        state=present
+        groups=dialout
+    - name: copies arduino sdk code
+      copy:
+        dest: "/usr/share/arduino/examples/SIK Guide Code"
+        src: "../../Templates/public/SIK Guide Code"
+    - name:  copy profile to opt
+      synchronize:
+        dest=/opt/
+        src=../../Templates/public/public  
+        archive=yes
+        checksum=yes
+    - name: chown /opt/public
+      file:
+        recurse=yes
+        owner=public
+        group=public
+        path=/opt/public
+    - name: add anacrontab for updates
+      copy:
+        src=../../Templates/public/anacrontab
+        dest=/etc/anacrontab
+        backup=yes
+        mode=0644
+        owner=root
+        group=root 
+    - name: add update script
+      copy:
+        src=../../Templates/public/userlogin
+        dest=/usr/local/bin/userlogin
+        mode=0755
+        owner=root
+        group=root 
+    - name: add presession script
+      copy:
+        src=../../Templates/public/Default
+        dest=/etc/mdm/PreSession/Default
+        mode=0755
+        owner=root
+        group=root 
+        backup=yes
+    - name: add mdm.conf
+      copy:
+        src=../../Templates/public/mdm.conf
+        dest=/etc/mdm/mdm.conf
+        mode=0755
+        owner=root
+        group=root 
+        backup=yes 
