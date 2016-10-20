@@ -16,6 +16,7 @@ This setup requires a control computer running linux to push out the configurati
 You can setup multiple computers at a time 
 
 In order to make changes to the setup:
+
 1. Customize the public profile however you like on the client computer
 2. Delete the Templates/public/public folder 
 3. Copy /home/public from the client computer to Templates/public/ on your control computer.
